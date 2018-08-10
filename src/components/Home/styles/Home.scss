@@ -1,0 +1,36 @@
+@import "../../../commons/styles/mixins.scss";
+@import "../../../commons/styles/variables.scss";
+
+.panel {
+    background-color: #FBF7F4;
+    text-align: center;
+    .float {
+        @include position(absolute, top, 60px, left, 0);
+        text-align: left;
+        width: 100%;
+        .center {
+            position: relative;
+            width: 130px;
+            margin: 0 auto;
+            padding-top: 365px;
+            text-align: center;
+            .use {
+                padding: 10px 28px;
+                border: 1px solid #434a5f;
+                color: #434a5f;
+                font-size: 18px;
+                border-radius: 28px;
+                background-color: transparent;
+                cursor: pointer;
+                transition-property: all;
+                transition-duration: .2s;
+                transition-timing-function: ease-out;
+                transition-delay: 0s;
+                &:hover {
+                    color: #fff;
+                    background-color: #434A5F;
+                }
+            }
+        }
+    }
+}

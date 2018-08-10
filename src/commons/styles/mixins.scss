@@ -1,0 +1,50 @@
+@import "./variables.scss";
+
+/* code block */
+// define attributes of width and height
+@mixin w-h($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+// fixed position
+@mixin position($type, $vertical, $v1, $horizon, $v2) {
+    position: $type;
+    #{$vertical}: $v1;
+    #{$horizon}: $v2;
+}
+// add prefix in order to  solve issues of the browser compatibility
+@mixin prefix($type, $val1) {
+    #{$type}: #{$val1};
+    @each $v in $vendors {
+        #{"-" + $v + "-" + $type}: #{$val1};
+    }
+}
+// css spite
+@mixin css-spite ($pos, $hoverpos) {
+    background-position: 0 $pos;
+    &:hover{
+        background-position: 0 $hoverpos;
+    }
+}
+// opacity
+@mixin opacity ($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity= $opacity * 100);
+}
+
+// CSS3 Animation
+@mixin keyframes ($name) {
+
+    @keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+}

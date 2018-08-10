@@ -1,0 +1,95 @@
+@import "../../../../commons/styles/mixins.scss";
+@import "../../../../commons/styles/variables.scss";
+
+.TopNavbar {
+    @include w-h(100%, 60px);
+    background-color: #{$lightBlue};
+    .center {
+        max-width: 1080px; 
+        margin: 0 auto;
+    }
+    .left {
+        img {
+            @include w-h(137px, 60px);
+            @include prefix(user-select, none);
+            float: left;
+        }
+        .navList {
+            list-style-type: none;
+            @include prefix(margin-before, 0);
+            @include prefix(margin-after, 0);
+            @include prefix(margin-start, 0);
+            @include prefix(margin-end, 0);
+            @include prefix(padding-start, 0);
+            li {
+                float: left;
+                height: 100%;
+                padding-left: 20px;
+            }
+            a {
+                text-decoration: none;
+                @include prefix(user-select, none);
+                cursor: pointer;
+            }
+        }
+        .navItem {
+            margin: 0 10px;
+            padding: 0 18px;
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            transition-property: all;
+            transition-duration: .2s;
+            transition-timing-function: ease-out;
+            transition-delay: 0s;
+            &:hover {
+                background-color: rgba(0,0,0,.05);
+            }
+        }
+        .activeNavItem {
+            display: inline-block;
+            box-sizing: border-box;
+            height: 60px;
+            margin: 0 10px;
+            padding: 0 18px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center; 
+            line-height: 60px;
+            border-bottom: 4px solid #{$deepYellow};
+            background-color: rgba(0,0,0,.1);
+            transition-property: all;
+            transition-duration: .2s;
+            transition-timing-function: ease-out;
+            transition-delay: 0s;
+        }
+    }
+    .right {
+        float: right;
+        .toLogin {
+            height: 60px;
+            padding: 0 18px;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: .2s;
+            transition-timing-function: ease-out;
+            transition-delay: 0s;
+            &:hover {
+                background-color: rgba(0,0,0,.05);
+            }
+        }
+        i {
+            @include prefix(user-select, none);
+            &::before {
+               padding-right: 5px;
+            }
+        }
+    }
+}

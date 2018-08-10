@@ -1,0 +1,20 @@
+@import "./mixins.scss";
+
+// .vertical_align_wrap > .vertical_align_middle 垂直居中
+:global(.vertical_align_wrap) {
+    position: absolute;
+    @include w-h(100%, 100%);
+    display: table;
+}
+:global(.vertical_align_middle) {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+// 水平居中
+:global(.center) {
+    margin: 0 auto;
+}
+:global(.text-center) {
+    text-align: center;
+}

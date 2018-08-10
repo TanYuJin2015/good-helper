@@ -1,0 +1,29 @@
+@import "./mixins.scss";
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(105, 29, 29, 0.05);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.15);
+    border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6, p, input, textarea {
+    font-family: -apple-system, BlinkMacSystemFont,
+                "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+                "Source Sans Pro", sans-serif, "Microsoft Yahei";
+}
+
+html, body {
+    @include w-h(100%, 100%);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: #F2F2F2;
+}
+
+a, button {
+    outline: none !important;
+}

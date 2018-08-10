@@ -1,0 +1,36 @@
+/* font */
+$fontStack:  Microsoft YaHei, "黑体", "宋体" , Tahoma, Helvetica, Arial, sans-serif;
+
+/* color stack */
+// Aquamarine
+$lightestAqua: rgb(144, 233, 214);
+$lighterAqua: #75D7C3;
+$lightAqua: #1ABC9C;
+$normalAqua: #1EA28A;
+$deepAqua: #248979;
+$deeperAqua: #006551;
+$deepestAqua: #2F5657;
+
+// Orange
+$lightestOrange: #FFC400;
+$lighterOrange: #FFB400;
+$lightOrange: #FFA400;
+$normalOrange: #FF9400;
+$deepOrange: #FF8400;
+$deeperOrange: #FF760F;
+$deepestOrange: #FF6400;
+
+// Yellow
+$deepYellow: #FCE33F;
+
+// Blue
+$lightestBlue: rgb(141, 208, 250);
+$lighterBlue: #22A7F0;
+$lightBlue: #0E90D2;
+$normalBlue: #0D89C7;
+$deepBlue: #0D81BD;
+$deeperBlue: #297CAC;
+$deepestBlue: #315269;
+
+// browser prefix
+$vendors: webkit, moz, ms, o, khtml;
